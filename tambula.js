@@ -1,4 +1,3 @@
-// tambula.js
 const generateTambulaTickets = (numberOfTickets) => {
     const tickets = [];
   

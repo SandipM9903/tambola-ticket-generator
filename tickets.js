@@ -1,4 +1,3 @@
-// tickets.js
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
@@ -39,7 +38,7 @@ router.get('/tickets/:userId', (req, res) => {
   const offset = (page - 1) * limit;
 
   // Fetch tickets from the database
-  const sql = 'SELECT * FROM tickets WHERE userId = ? LIMIT 10 OFFSET 0';
+  const sql = 'SELECT ticketData FROM tickets WHERE userId = ? LIMIT 10 OFFSET 0';
   connection.query(sql, [userId, limit, offset], (error, results) => {
     if (error) {
       console.error(error);
